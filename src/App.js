@@ -21,9 +21,9 @@ const App = () => {
         console.log(movieState.movies)
         console.log(data)
 
-        
+
        
-        setMovieState({ ...movieState, movies: [data] })
+        setMovieState({ ...movieState, movies: [...movieState.movies, data], movie: '' })
         
       })
       .catch(err => console.log(err))
